@@ -1,16 +1,18 @@
 ﻿require([
         'i18n!nls/app-resx',
+        'menu-module',
         'jquery',
         'jquery-validate',
         'jquery-validate-unobtrusive',
         'bootstrap',
-        'respond',
-        'menu-module'
-], function (resx) {
+        'respond'
+], function (resx, menu) {
 
     var ctrl = function () {
 
         this.init();
+        mainMenu = new menu();
+        mainMenu.init();
     };
 
     ctrl.prototype.init = function () {

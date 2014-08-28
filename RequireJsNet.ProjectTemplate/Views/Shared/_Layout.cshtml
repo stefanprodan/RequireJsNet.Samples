@@ -48,7 +48,7 @@
         // root folder for your js controllers, will be used for composing paths to entrypoint
         EntryPointRoot = "~/Scripts/",
         // whether we should load overrides or not, used for autoBundles
-        LoadOverrides = true,
+        LoadOverrides = false,
         // compute the value you want locale to have, used for i18n
         LocaleSelector = html => System.Threading.Thread.CurrentThread.CurrentUICulture.Name.Split('-')[0],
         // instance of IRequireJsLogger
@@ -58,7 +58,7 @@
         // extensability point for the options object
         ProcessOptions = options => { },
         // value for urlArgs to be passed to require.js, used for versioning
-        UrlArgs = "v=" + DateTime.Now.ToString("ddMMyy")
+        UrlArgs = RenderHelper.RenderAppVersion()
     })
 
 </body>
