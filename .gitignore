@@ -172,3 +172,19 @@ UpgradeLog*.htm
 
 # Microsoft Fakes
 FakesAssemblies/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# RequireJS.NET Compressor build files
+*.override.config
+*.override.json
+
+# ResxToJs build files
+Nls/Root/
+Nls/en/
+Nls/ro/
