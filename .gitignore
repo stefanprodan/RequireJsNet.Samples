@@ -188,3 +188,6 @@ Thumbs.db
 Nls/Root/
 Nls/en/
 Nls/ro/
+RequireJsNet.ProjectTemplate/Scripts/Nls/en/app-resx.js
+RequireJsNet.ProjectTemplate/Scripts/Nls/ro/app-resx.js
+RequireJsNet.ProjectTemplate/Scripts/Nls/Root/app-resx.js

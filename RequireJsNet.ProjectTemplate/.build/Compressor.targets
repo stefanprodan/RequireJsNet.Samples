@@ -1,0 +1,12 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <UsingTask TaskName="RequireCompressorTask" AssemblyFile="..\bin\RequireJsNet.Compressor.dll" />
+  <ItemGroup>
+    <Configs Include="$(MSBuildProjectDirectory)\RequireJS.json" />
+  </ItemGroup>
+  <Target Name="Minify" AfterTargets="AfterBuild">
+    <RequireCompressorTask LoggingType="Debug" RequireConfigs="@(Configs)" AutoCompressor="true" EncodingType="UTF8" ProjectPath="$(MSBuildProjectDirectory)" />
+  </Target>
+  <Target Name="MinifyForDeploy" AfterTargets="CopyAllFilesToSingleFolderForMsdeploy">
+    <RequireCompressorTask LoggingType="Debug" RequireConfigs="@(Configs)" AutoCompressor="true" EncodingType="UTF8" ProjectPath="$(_PackageTempDir)" />
+  </Target>
+</Project>

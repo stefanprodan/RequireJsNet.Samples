@@ -1,0 +1,12 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <UsingTask TaskName="ResxToJsTask" AssemblyFile="..\bin\RequireJsNet.ResxToJs.dll" />
+  <Target Name="ResxForBuild" AfterTargets="AfterBuild">
+    <MsBuild Projects="$(MSBuildProjectFile)" Targets="Resources" Properties="DestinationDir=$(MSBuildProjectDirectory)" />
+  </Target>
+  <Target Name="ResourcesForDeploy" AfterTargets="CopyAllFilesToSingleFolderForMsdeploy">
+    <MsBuild Projects="$(MSBuildProjectFile)" Targets="Resources" Properties="DestinationDir=$(_PackageTempDir)" />
+  </Target>
+  <Target Name="Resources">
+    <ResxToJsTask RootResx="$(MSBuildProjectDirectory)\Resources\Resource.resx" RootJS="$(DestinationDir)\Scripts\Nls\app-resx.js" />
+  </Target>
+</Project>
