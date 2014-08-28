@@ -21,19 +21,24 @@
         }
     },
     "autoBundles": {
-        "full": {
-            "outputPath": "bundles\\",
+        "main-app": {
+            "outputPath": "Scripts/Bundles/",
             "include": [
                 {
-                    "directory": "controllers\\Root\\"
-                },
-                {
-                    "file": "jquery-1.10.2"
+                    "directory": "Controllers/Root"
                 }
             ]
         },
-        "requirePlugins": {
-            "outputPath": "bundles\\",
+        "admin-app": {
+            "outputPath": "Scripts/Bundles/",
+            "include": [
+                {
+                    "directory": "Controllers/Admin"
+                }
+            ]
+        },
+        "require-plugins": {
+            "outputPath": "Scripts/Bundles/",
             "include": [
                 {
                     "file": "Components/RequireJS/i18n"
