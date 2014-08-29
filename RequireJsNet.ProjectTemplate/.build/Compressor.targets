@@ -4,9 +4,19 @@
     <Configs Include="$(MSBuildProjectDirectory)\RequireJS.json" />
   </ItemGroup>
   <Target Name="Minify" AfterTargets="AfterBuild">
-    <RequireCompressorTask LoggingType="Debug" RequireConfigs="@(Configs)" AutoCompressor="true" EncodingType="UTF8" ProjectPath="$(MSBuildProjectDirectory)" />
+    <RequireCompressorTask 
+      LoggingType="Debug" 
+      RequireConfigs="@(Configs)" 
+      AutoCompressor="true" 
+      EncodingType="UTF8" 
+      ProjectPath="$(MSBuildProjectDirectory)" />
   </Target>
   <Target Name="MinifyForDeploy" AfterTargets="CopyAllFilesToSingleFolderForMsdeploy">
-    <RequireCompressorTask LoggingType="Debug" RequireConfigs="@(Configs)" AutoCompressor="true" EncodingType="UTF8" ProjectPath="$(_PackageTempDir)" />
+    <RequireCompressorTask 
+      LoggingType="Info" 
+      RequireConfigs="@(Configs)" 
+      AutoCompressor="true" 
+      EncodingType="UTF8" 
+      ProjectPath="$(_PackageTempDir)" />
   </Target>
 </Project>

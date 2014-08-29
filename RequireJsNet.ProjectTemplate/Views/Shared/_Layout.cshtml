@@ -48,7 +48,7 @@
         // root folder for your js controllers, will be used for composing paths to entrypoint
         EntryPointRoot = "~/Scripts/",
         // whether we should load overrides or not, used for autoBundles
-        LoadOverrides = false,
+        LoadOverrides = HttpContext.Current.IsDebuggingEnabled,
         // compute the value you want locale to have, used for i18n
         LocaleSelector = html => System.Threading.Thread.CurrentThread.CurrentUICulture.Name.Split('-')[0],
         // instance of IRequireJsLogger
