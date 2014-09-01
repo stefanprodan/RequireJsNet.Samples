@@ -49,14 +49,17 @@
       <HintPath>..\packages\Jint.2.1.0.0\lib\portable-net40+sl50+wp80+win\Jint.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="RequireJsNet">
-      <HintPath>..\packages\RequireJsNet.2.0.33.0-unstable\lib\net45\RequireJsNet.dll</HintPath>
+    <Reference Include="RequireJsNet, Version=2.0.36.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RequireJsNet.2.0.36.0\lib\net45\RequireJsNet.dll</HintPath>
     </Reference>
-    <Reference Include="RequireJsNet.Compressor">
-      <HintPath>..\packages\RequireJsNet.Compressor.2.0.26.0-unstable\lib\net45\RequireJsNet.Compressor.dll</HintPath>
+    <Reference Include="RequireJsNet.Compressor, Version=2.0.27.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RequireJsNet.Compressor.2.0.27.0\lib\net45\RequireJsNet.Compressor.dll</HintPath>
     </Reference>
-    <Reference Include="RequireJsNet.ResxToJs">
-      <HintPath>..\packages\RequireJsNet.ResxToJs.2.0.4.0-unstable\lib\net45\RequireJsNet.ResxToJs.dll</HintPath>
+    <Reference Include="RequireJsNet.ResxToJs, Version=2.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RequireJsNet.ResxToJs.2.0.5.0\lib\net45\RequireJsNet.ResxToJs.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
